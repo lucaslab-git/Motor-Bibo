@@ -29,22 +29,11 @@ void setMotor(int pin, int v) // set up Motor
 }
 
 void setup() {
-  int Gang = 5;           // set up Motor 
-  setMotor(30, Gang); 
-  setMotor(33, Gang); 
-  setMotor(36, Gang); 
-  setMotor(39, Gang); 
+  
 }
 
 void loop() {
-  VR.setSpeed(3000);  
-  VL.setSpeed(3000); 
-  HR.setSpeed(3000); 
-  HL.setSpeed(3000); 
-  VR.runSpeed(); 
-  VL.runSpeed(); 
-  HR.runSpeed(); 
-  HL.runSpeed(); 
+  
 }
 
 

@@ -11,20 +11,6 @@ AccelStepper VR(1, 28, 29);
 
 #define S0RP A0 
 
-void setup() {
-  drive_left_green();
-  delay(1000);
-  drive_right_green();
-  delay(1000);
-  drive_right_obstacle();
-  delay(1000);
-  drive_left_obstacle();
-}
-
-void loop() {
-  // put your main code here, to run repeatedly:
-}
-
 void setMotor(int pin, int v) // set up Motor 
 {
   pinMode(pin, OUTPUT);     // SET PIN
@@ -41,6 +27,27 @@ void setMotor(int pin, int v) // set up Motor
   VR.setMaxSpeed(3000); 
 
 }
+
+void setup() {
+  int Gang = 5;           // set up Motor 
+  setMotor(30, Gang); 
+  setMotor(33, Gang); 
+  setMotor(36, Gang); 
+  setMotor(39, Gang); 
+}
+
+void loop() {
+  VR.setSpeed(3000);  
+  VL.setSpeed(3000); 
+  HR.setSpeed(3000); 
+  HL.setSpeed(3000); 
+  VR.runSpeed(); 
+  VL.runSpeed(); 
+  HR.runSpeed(); 
+  HL.runSpeed(); 
+}
+
+
 
 void drive_left_green(){
   int Gang = 4;       // set up Motor 
